@@ -1,0 +1,38 @@
+urxvt*transparent: false
+urxvt*depth: 32
+urxvt*foreground: #CECECE
+urxvt*background: rgba:0000/0000/0000/bbbb
+!! urxvt*background: #1E1D23
+urxvt*termName: xterm-256color
+urxvt*scrollBar: off
+!! urxvt*font: xft:Hermit-10
+urxvt*font: xft:Terminus-10:antialias=false
+!! urxvt*font: xft:Inconsolata-12
+!! urxvt*font: 7x13
+!! urxvt*font: 9x15
+
+urxvt*color0: #1E1D23
+urxvt*color1: #F92672
+urxvt*color2: #A6E22E
+urxvt*color3: #E6DB74
+urxvt*color4: #878882
+urxvt*color5: #AE81FF
+urxvt*color6: #FD971F
+urxvt*color7: #CECECE
+urxvt*color8: #414141
+urxvt*color9: #F92672
+urxvt*color10: #A6E22E
+urxvt*color11: #E6DB74
+urxvt*color12: #66D9EF
+urxvt*color13: #AE81FF
+urxvt*color14: #FD971F
+urxvt*color15: #FFFFFF
+
+URxvt.perl-ext-common: default,matcher,tabbed
+
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
