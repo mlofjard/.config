@@ -1,0 +1,20 @@
+Config { font = "xft:Terminus-10"  
+     , bgColor = "#000000"  
+     , fgColor = "#CECECE"
+     , alpha = 180
+     , position = Static { xpos = 0 , ypos = 0, width = 1820, height = 18 }  
+     , commands = [Run Network "eth0" ["-t", "eth0 rx: <rx> tx: <tx>", "-L","0","-H","70","-n","#A6E22E","-h","#F92672", "-m", "7"] 100
+           , Run Wireless "wlan0" ["-t", "WiFi: <essid> <quality>%", "-L", "10", "-H", "75", "-l", "#F92672", "-h", "#A6E22E", "-m", "3"] 30
+           , Run Memory ["-t","Mem: <usedratio>%", "-m", "3"] 50
+           , Run BatteryP ["BAT0"] ["-t","Bat: <left>%<acstatus>", "-L", "15", "-H", "80", "-l", "#F92672", "-h", "#A6E22E", "-m", "3", "--", "-O", " Chrg", "-o", "", "-f", "AC0/online"] 100    
+           , Run CoreTemp ["-t", "<core0>C", "-L", "30", "-H", "75", "-n","#A6E22E","-h","#F92672", "-m", "5"] 20
+           , Run Date "%a %b %_d %H:%M" "date" 100  
+           , Run Com "/home/mikael/scripts/volume.sh" [] "volume" 20
+           , Run Com "/home/mikael/scripts/volumestate.sh" [] "volumestate" 20
+           , Run MultiCpu ["-t", "CPU: <total0>% <total1>% <total2>% <total3>%", "-L","5","-H","50","-l","#A6E22E","-h","#F92672", "-m", "3"] 40
+           , Run StdinReader  
+           ]  
+     , sepChar = "%"  
+     , alignSep = "}{"  
+     , template = " %StdinReader%}{%multicpu% %coretemp% | %memory% | %wlan0wi% | %battery% | <fc=#E6DB74>%date%</fc> | Vol: %volume% %volumestate%"
+     }  
